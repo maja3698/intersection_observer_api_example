@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #164a41;
+  --lightgreen: #4d774e;
+  --lightestgreen: #9dc88d;
+  --orange: #f1824a;
+  --white: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+  list-style: none;
+  background-color: var(--lightgreen);
+  color: var(--white);
+  font-weight: 600;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+}
+
+#hero-img {
+  width: 100vw;
+  height: 700px;
+  background-image: url(https://picsum.photos/1200/700);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section {
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-rows: auto;
+  place-items: center;
+
+  gap: 3rem;
+  padding: 1rem;
+}
+
+p {
+  max-width: 40vw;
+  line-height: 1.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+#logo {
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--lightestgreen);
+}
+
+.container {
+  overflow: hidden;
+  position: relative;
+  padding-top: 3vw;
+  top: 0;
+  left: -90vw;
+}
+
+.animated-carousel {
+  display: flex;
+  gap: 3vw;
+}
+
+.moveLeft {
+  animation: moveLeft 20s linear infinite;
+}
+
+@keyframes moveLeft {
+  from {
+    left: -100vw;
+  }
+  to {
+    left: 150vw;
+  }
+}
